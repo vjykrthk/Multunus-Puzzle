@@ -39,7 +39,10 @@
 </script>
 <script type="text/ng-template" id="tweeters-template.html">
     <div class="main-tweeters">
-        <div class="tweeters">
+        <div class="loader" ng-show="true">
+            <img src="images/loader.gif"/>
+        </div>
+        <div class="tweeters" ng-show="false">
             <div class="tweeter" ng-repeat="tweeter in tweeters">
                 <a href="/{{tweeter.id}}"><img ng-src="{{tweeter.image}}" class="img-circle main-image"/></a>
             </div>

@@ -52,7 +52,10 @@
     <retweeters-list></retweeters-list>
 </script>
 <script type="text/ng-template" id="tweeters-template.html">
-    <div class="main-tweeters">
+    <div class="tweeters-loader" ng-show="showLoader">
+        <img src="images/loader.gif" />
+    </div>
+    <div class="main-tweeters" ng-show="!showLoader">
         <div class="tweeters">
             <div class="tweeter" ng-repeat="tweeter in tweeters">
                 <a href="/{{tweeter.id}}"><img ng-src="{{tweeter.image}}" class="img-circle main-image"/></a>
@@ -62,8 +65,12 @@
 </script>
 <script type="text/ng-template" id="retweeters-template.html">
     <div class="retweeters">
+        <!--<div class="tweeters-loader" ng-show="showLoader">-->
+            <!--<img src="images/loader.gif">-->
+        <!--</div>-->
         <div class="tweeter">
-            <img ng-src="{{tweeter.image}}" class="img-circle main-image"/>
+            <img src="images/loader.gif" ng-show="showLoader"/>
+            <img ng-src="{{tweeter.image}}" class="img-circle main-image" ng-show="!showLoader"/>
         </div>
         <div class="retweeter" ng-repeat="retweeter in retweeters" tooltip="{{retweeter.followers_count}}">
             <a href="#"><img ng-src="{{retweeter.image}}" class="img-circle main-image"/></a>

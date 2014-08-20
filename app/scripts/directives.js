@@ -4,8 +4,10 @@ app.directive('tweetersList', function($log) {
     return {
         restrict: 'E',
         controller: function($scope, MPSrvc) {
+           $scope.showLoader = true;
            MPSrvc.getTweeters().then(function(tweeters) {
                $scope.tweeters = tweeters;
+               $scope.showLoader = false;
            });
            $log.log("tweetersList - directive");
 
@@ -18,9 +20,11 @@ app.directive('retweetersList', function($log) {
     return {
         restrict: 'E',
         controller: function($scope, $routeParams, MPSrvc) {
+            $scope.showLoader = true;
             MPSrvc.getRetweeters($routeParams.id).then(function(data) {
                 $scope.tweeter = data.tweeter;
                 $scope.retweeters = data.retweeters;
+                $scope.showLoader = false;
             });
         },
         link: function(scope, element, attrs) {
