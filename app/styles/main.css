@@ -115,7 +115,7 @@ body {
     height: 100px;
 }
 
-.retweeters .tweeter img {
+.retweeters .tweeter img.main-image {
     width: 250px;
     height:250px;
 }
