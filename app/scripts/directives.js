@@ -42,8 +42,6 @@ app.directive('retweetersList', function($log) {
                         x = radius * Math.cos(angle) + coc;
                         y = radius * Math.sin(angle) + coc;
                         angular.element(relem).css({'position' : 'absolute', 'left' : x+'px', 'top' : y+'px'});
-                        $log.log("relem ", angular.element(relem).data('title'));
-                        angular.element(relem).tooltip();
                         angle += increase;
                     }
                     telem.css({'position' : 'absolute', 'left': '33px', 'top' : '18px' });
