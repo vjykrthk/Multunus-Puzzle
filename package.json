@@ -13,7 +13,8 @@
     "compression": "~1.0.1",
     "lodash": "~2.4.1",
     "ejs": "~0.8.4",
-    "twit": "latest"
+    "twit": "latest",
+    "async": "latest"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
