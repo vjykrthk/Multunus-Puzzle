@@ -14,7 +14,8 @@
     "lodash": "~2.4.1",
     "ejs": "~0.8.4",
     "twit": "latest",
-    "async": "latest"
+    "async": "latest",
+    "pg": "~3.4.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
